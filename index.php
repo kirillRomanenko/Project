@@ -16,9 +16,31 @@
 //$dat = date("h:i:s");
 //echo "$dat";
 
-for ($i=1; $i<=5; $i++){
-    echo ($i * $i * $i);
-}
+//for ($i=1; $i<=5; $i++){
+//    echo ($i * $i * $i);
+//}
+
+//$MY_VAR=5.2345;
+//echo gettype($MY_VAR);
+
+//$VAR=5.2345;
+//if (isset($VAR)){
+//    echo "Переменная существует. $VAR";
+//}
+//else{
+//    echo "Переменная не существует.";
+//}
+
+//$VAR=5;
+//echo $VAR;
+//unset($VAR);
+//echo $VAR;
+
+//define("pi", 3.14);
+//echo pi;
+
+$a=array('a' => 'apple', 'b' => 'car', 'c' => 'dog');
+print_r($a);
 
 ?>
 </body>
