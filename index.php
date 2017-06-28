@@ -39,8 +39,16 @@
 //define("pi", 3.14);
 //echo pi;
 
-$a=array('a' => 'apple', 'b' => 'car', 'c' => 'dog');
-print_r($a);
+//$a=array('a' => 'apple', 'b' => 'car', 'c' => 'dog');
+//print_r($a);
+
+//$a="Hello";
+//echo $a[0];
+
+$x = -17;
+$x = $x < 0 ? - $x : $x;
+echo $x;
+
 
 ?>
 </body>
