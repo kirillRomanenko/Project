@@ -45,9 +45,36 @@
 //$a="Hello";
 //echo $a[0];
 
-$x = -17;
-$x = $x < 0 ? - $x : $x;
-echo $x;
+//$x = -17;
+//$x = $x < 0 ? - $x : $x;
+//echo $x;
+
+//$items = 11;
+//if ($items < 10){
+//    echo "меньше 10";
+//}
+//else {
+//    echo "больше либо равно 10";
+//}
+
+//while ($i < 32){
+//  echo  $i += 1; //   $i = $i + 1;
+//}
+
+//$x = 1;
+//do{
+//    echo  "$x\t";
+//}
+//while($x++ < 10);
+
+//for ($x = 0; $x <= 10; $x++){
+//    echo "$x\t";
+//}
+
+foreach ($_SERVER as $k => $v){
+    echo "<b>$k</b> => <b>$v</b><br>";
+}
+
 
 
 ?>
