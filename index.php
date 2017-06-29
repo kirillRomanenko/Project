@@ -71,10 +71,29 @@
 //    echo "$x\t";
 //}
 
-foreach ($_SERVER as $k => $v){
-    echo "<b>$k</b> => <b>$v</b><br>";
-}
+//foreach ($_SERVER as $k => $v){
+//    echo "<b>$k</b> => <b>$v</b><br>";
+//}
 
+//$name["Ivanov"] = "Alex ";
+//$name["Wilsher"] = "Jeff ";
+//$name["Spectr"] = "Harvey";
+////for ($i = 0; $i < count($name); $i++){
+////    echo "$name[$i]";
+////}
+//echo $name["Spectr"];
+//$number = count($name);
+//echo $number;
+//$first = ["first", "second"];
+//$second = ["dog", "cat"];
+//$all = $first + $second;
+//for ($i = 0; $i < count($all); $i++) {
+//    echo $all[$i];
+//}
+$birth = ["John" => "29.09.1985", "Billy" => "05.04.1994"];
+foreach ($birth as $k => $v) {
+    echo "$k Родился $v <br>";
+}
 
 
 ?>
