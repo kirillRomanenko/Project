@@ -1,14 +1,4 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Project</title>
-</head>
-<body>
-<h1>Hello world!</h1>
+
 <?php
 //$dat = date("d.m.y");
 //echo "$dat";
@@ -90,10 +80,14 @@
 //for ($i = 0; $i < count($all); $i++) {
 //    echo $all[$i];
 //}
-$birth = ["John" => "29.09.1985", "Billy" => "05.04.1994"];
-foreach ($birth as $k => $v) {
-    echo "$k Родился $v <br>";
-}
+//$birth = ["John" => "29.09.1985", "Billy" => "05.04.1994"];
+//foreach ($birth as $k => $v) {
+//    echo "$k Родился $v <br>";
+//}
+
+require_once "head.html";
+require_once "footer.html";
+
 
 
 ?>
