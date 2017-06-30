@@ -1,4 +1,3 @@
-
 <?php
 //$dat = date("d.m.y");
 //echo "$dat";
@@ -86,8 +85,27 @@
 //}
 
 require_once "head.html";
-require_once "footer.html";
 
+//function mySqr($n)
+//{
+//    return $n * $n;
+//}
+//
+//$value = mySqr(5);
+//echo $value;
+
+function funcCount()
+{
+    static $count = 0;
+    $count++;
+    echo $count;
+}
+
+for ($i = 0; $i < 5; $i++) {
+    funcCount();
+}
+
+require_once "footer.html";
 
 
 ?>
