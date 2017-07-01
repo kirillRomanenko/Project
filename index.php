@@ -1,3 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+<!--<form action="" method="get">-->
+<!--    <p>Ваше имя: <input type="text" name="name"></p>-->
+<!--    <p>Ваш возраст: <input type="text" name="age"></p>-->
+<!--    <p><input type="submit"></p>-->
+<!--</form>-->
+<!--Привет --><?php //echo htmlspecialchars($_GET["name"]);?><!--.-->
+<!--Вам --><?php //echo htmlspecialchars($_GET["age"]);?><!-- лет.-->
+
+
+<form action="<?php echo htmlentities($_SERVER['PHP_SELF']) ?>" method="get">
+
+    <fieldset>
+        <legend>Выберите животное</legend>
+        <label for="dog">
+            <input type="checkbox" id="dog" name="animal[]" value="собака">
+            Собака
+        </label>
+        <label for="cat">
+            <input type="checkbox" id="cat" name="animal[]" value="кошка">
+            Кошка
+        </label>
+        <label for="fox">
+            <input type="checkbox" id="fox" name="animal[]" value="лиса">
+            Лиса
+        </label>
+    </fieldset>
+    <input type="submit" value="Отправить">
+
+</form>
+
+
 <?php
 //$dat = date("d.m.y");
 //echo "$dat";
@@ -94,18 +136,25 @@ require_once "head.html";
 //$value = mySqr(5);
 //echo $value;
 
-function funcCount()
-{
-    static $count = 0;
-    $count++;
-    echo $count;
-}
-
-for ($i = 0; $i < 5; $i++) {
-    funcCount();
-}
+//function funcCount()
+//{
+//    static $count = 0;
+//    $count++;
+//    echo $count;
+//}
+//
+//for ($i = 0; $i < 5; $i++) {
+//    funcCount();
+//}
 
 require_once "footer.html";
+$animal = isset($_GET['animal']) ? $_GET['animal'] : '';
+if (!empty($animal)) {
+    echo '<br><br> Выбраны: ';
+    foreach ($animal as $a) {
+        echo "<span style=\"color: green\">" . htmlentities($a) . "</span>";
+    }
+}
 
 
 ?>
