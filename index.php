@@ -1,3 +1,16 @@
+<?php
+//$cookie_name = "user";
+//$cookie_value = "cookie user";
+//setcookie($cookie_name, $cookie_value, time() + 86400);
+
+$counter = isset($_COOKIE['counter']) ? $_COOKIE['counter'] : 0;
+$counter++;
+setcookie("counter", $counter);
+echo $counter;
+
+?>
+
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -18,26 +31,26 @@
 <!--Вам --><?php //echo htmlspecialchars($_GET["age"]);?><!-- лет.-->
 
 
-<form action="<?php echo htmlentities($_SERVER['PHP_SELF']) ?>" method="get">
-
-    <fieldset>
-        <legend>Выберите животное</legend>
-        <label for="dog">
-            <input type="checkbox" id="dog" name="animal[]" value="собака">
-            Собака
-        </label>
-        <label for="cat">
-            <input type="checkbox" id="cat" name="animal[]" value="кошка">
-            Кошка
-        </label>
-        <label for="fox">
-            <input type="checkbox" id="fox" name="animal[]" value="лиса">
-            Лиса
-        </label>
-    </fieldset>
-    <input type="submit" value="Отправить">
-
-</form>
+<!--<form action="--><?php //echo htmlentities($_SERVER['PHP_SELF']) ?><!--" method="get">-->
+<!---->
+<!--    <fieldset>-->
+<!--        <legend>Выберите животное</legend>-->
+<!--        <label for="dog">-->
+<!--            <input type="checkbox" id="dog" name="animal[]" value="собака">-->
+<!--            Собака-->
+<!--        </label>-->
+<!--        <label for="cat">-->
+<!--            <input type="checkbox" id="cat" name="animal[]" value="кошка">-->
+<!--            Кошка-->
+<!--        </label>-->
+<!--        <label for="fox">-->
+<!--            <input type="checkbox" id="fox" name="animal[]" value="лиса">-->
+<!--            Лиса-->
+<!--        </label>-->
+<!--    </fieldset>-->
+<!--    <input type="submit" value="Отправить">-->
+<!---->
+<!--</form>-->
 
 
 <?php
@@ -148,14 +161,19 @@ require_once "head.html";
 //}
 
 require_once "footer.html";
-$animal = isset($_GET['animal']) ? $_GET['animal'] : '';
-if (!empty($animal)) {
-    echo '<br><br> Выбраны: ';
-    foreach ($animal as $a) {
-        echo "<span style=\"color: green\">" . htmlentities($a) . "</span>";
-    }
-}
+//$animal = isset($_GET['animal']) ? $_GET['animal'] : '';
+//if (!empty($animal)) {
+//    echo '<br><br> Выбраны: ';
+//    foreach ($animal as $a) {
+//        echo "<span style=\"color: green\">" . htmlentities($a) . "</span>";
+//    }
+//}
 
+
+//if (!isset($_COOKIE[$cookie_name])) {
+//    echo "cookie named $cookie_name";
+//    echo "cookie value $cookie_value";
+//}
 
 ?>
 </body>
